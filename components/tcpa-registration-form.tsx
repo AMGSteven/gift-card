@@ -132,7 +132,7 @@ export function TCPARegistrationForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3">
         {/* Primary Data Collection Fields */}
         <div className="space-y-3">
           <FormField
@@ -140,7 +140,7 @@ export function TCPARegistrationForm() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="font-medium flex items-center">
+                <FormLabel className="font-medium flex items-center text-sm">
                   Email Address*
                   <span className="ml-1 text-xs text-green-600">(For confirmation)</span>
                 </FormLabel>
@@ -150,14 +150,14 @@ export function TCPARegistrationForm() {
                       placeholder="your.email@example.com"
                       {...field}
                       className={cn(
-                        "border-2 focus:border-green-500 h-11 pl-3 pr-10",
+                        "border-2 focus:border-green-500 h-10 pl-3 pr-10",
                         form.formState.errors.email ? "border-red-300 focus:border-red-500" : "border-gray-200",
                       )}
                     />
                     {form.formState.errors.email ? (
-                      <AlertCircle className="h-5 w-5 text-red-500 absolute right-3 top-3" />
+                      <AlertCircle className="h-5 w-5 text-red-500 absolute right-3 top-2.5" />
                     ) : field.value && !form.formState.errors.email ? (
-                      <CheckCircle className="h-5 w-5 text-green-500 absolute right-3 top-3" />
+                      <CheckCircle className="h-5 w-5 text-green-500 absolute right-3 top-2.5" />
                     ) : null}
                   </div>
                 </FormControl>
@@ -171,9 +171,9 @@ export function TCPARegistrationForm() {
             name="phone"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="font-medium flex items-center">
+                <FormLabel className="font-medium flex items-center text-sm">
                   Phone Number*
-                  <span className="ml-1 text-xs text-green-600">(Required for prize notification)</span>
+                  <span className="ml-1 text-xs text-green-600">(Required for prize)</span>
                 </FormLabel>
                 <FormControl>
                   <div className="relative">
@@ -185,14 +185,14 @@ export function TCPARegistrationForm() {
                         handlePhoneChange(e)
                       }}
                       className={cn(
-                        "border-2 focus:border-green-500 h-11 pl-3 pr-10",
+                        "border-2 focus:border-green-500 h-10 pl-3 pr-10",
                         form.formState.errors.phone ? "border-red-300 focus:border-red-500" : "border-gray-200",
                       )}
                     />
                     {form.formState.errors.phone ? (
-                      <AlertCircle className="h-5 w-5 text-red-500 absolute right-3 top-3" />
+                      <AlertCircle className="h-5 w-5 text-red-500 absolute right-3 top-2.5" />
                     ) : field.value && !form.formState.errors.phone ? (
-                      <CheckCircle className="h-5 w-5 text-green-500 absolute right-3 top-3" />
+                      <CheckCircle className="h-5 w-5 text-green-500 absolute right-3 top-2.5" />
                     ) : null}
                   </div>
                 </FormControl>
@@ -208,21 +208,21 @@ export function TCPARegistrationForm() {
             name="firstName"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="font-medium">First Name*</FormLabel>
+                <FormLabel className="font-medium text-sm">First Name*</FormLabel>
                 <FormControl>
                   <div className="relative">
                     <Input
                       placeholder="John"
                       {...field}
                       className={cn(
-                        "border-2 focus:border-green-500 h-11 pl-3 pr-10",
+                        "border-2 focus:border-green-500 h-10 pl-3 pr-10",
                         form.formState.errors.firstName ? "border-red-300 focus:border-red-500" : "border-gray-200",
                       )}
                     />
                     {form.formState.errors.firstName ? (
-                      <AlertCircle className="h-5 w-5 text-red-500 absolute right-3 top-3" />
+                      <AlertCircle className="h-5 w-5 text-red-500 absolute right-3 top-2.5" />
                     ) : field.value && !form.formState.errors.firstName ? (
-                      <CheckCircle className="h-5 w-5 text-green-500 absolute right-3 top-3" />
+                      <CheckCircle className="h-5 w-5 text-green-500 absolute right-3 top-2.5" />
                     ) : null}
                   </div>
                 </FormControl>
@@ -236,21 +236,21 @@ export function TCPARegistrationForm() {
             name="lastName"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="font-medium">Last Name*</FormLabel>
+                <FormLabel className="font-medium text-sm">Last Name*</FormLabel>
                 <FormControl>
                   <div className="relative">
                     <Input
                       placeholder="Doe"
                       {...field}
                       className={cn(
-                        "border-2 focus:border-green-500 h-11 pl-3 pr-10",
+                        "border-2 focus:border-green-500 h-10 pl-3 pr-10",
                         form.formState.errors.lastName ? "border-red-300 focus:border-red-500" : "border-gray-200",
                       )}
                     />
                     {form.formState.errors.lastName ? (
-                      <AlertCircle className="h-5 w-5 text-red-500 absolute right-3 top-3" />
+                      <AlertCircle className="h-5 w-5 text-red-500 absolute right-3 top-2.5" />
                     ) : field.value && !form.formState.errors.lastName ? (
-                      <CheckCircle className="h-5 w-5 text-green-500 absolute right-3 top-3" />
+                      <CheckCircle className="h-5 w-5 text-green-500 absolute right-3 top-2.5" />
                     ) : null}
                   </div>
                 </FormControl>
@@ -266,21 +266,21 @@ export function TCPARegistrationForm() {
             name="city"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="font-medium">City*</FormLabel>
+                <FormLabel className="font-medium text-sm">City*</FormLabel>
                 <FormControl>
                   <div className="relative">
                     <Input
                       placeholder="New York"
                       {...field}
                       className={cn(
-                        "border-2 focus:border-green-500 h-11 pl-3 pr-10",
+                        "border-2 focus:border-green-500 h-10 pl-3 pr-10",
                         form.formState.errors.city ? "border-red-300 focus:border-red-500" : "border-gray-200",
                       )}
                     />
                     {form.formState.errors.city ? (
-                      <AlertCircle className="h-5 w-5 text-red-500 absolute right-3 top-3" />
+                      <AlertCircle className="h-5 w-5 text-red-500 absolute right-3 top-2.5" />
                     ) : field.value && !form.formState.errors.city ? (
-                      <CheckCircle className="h-5 w-5 text-green-500 absolute right-3 top-3" />
+                      <CheckCircle className="h-5 w-5 text-green-500 absolute right-3 top-2.5" />
                     ) : null}
                   </div>
                 </FormControl>
@@ -295,7 +295,7 @@ export function TCPARegistrationForm() {
               name="state"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="font-medium">State*</FormLabel>
+                  <FormLabel className="font-medium text-sm">State*</FormLabel>
                   <FormControl>
                     <div className="relative">
                       <Input
@@ -307,14 +307,14 @@ export function TCPARegistrationForm() {
                           handleStateChange(e)
                         }}
                         className={cn(
-                          "border-2 focus:border-green-500 h-11 pl-3 pr-10 uppercase",
+                          "border-2 focus:border-green-500 h-10 pl-3 pr-10 uppercase",
                           form.formState.errors.state ? "border-red-300 focus:border-red-500" : "border-gray-200",
                         )}
                       />
                       {form.formState.errors.state ? (
-                        <AlertCircle className="h-5 w-5 text-red-500 absolute right-3 top-3" />
+                        <AlertCircle className="h-5 w-5 text-red-500 absolute right-3 top-2.5" />
                       ) : field.value && !form.formState.errors.state ? (
-                        <CheckCircle className="h-5 w-5 text-green-500 absolute right-3 top-3" />
+                        <CheckCircle className="h-5 w-5 text-green-500 absolute right-3 top-2.5" />
                       ) : null}
                     </div>
                   </FormControl>
@@ -328,7 +328,7 @@ export function TCPARegistrationForm() {
               name="zipCode"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="font-medium">Zip*</FormLabel>
+                  <FormLabel className="font-medium text-sm">Zip*</FormLabel>
                   <FormControl>
                     <div className="relative">
                       <Input
@@ -340,14 +340,14 @@ export function TCPARegistrationForm() {
                           handleZipChange(e)
                         }}
                         className={cn(
-                          "border-2 focus:border-green-500 h-11 pl-3 pr-10",
+                          "border-2 focus:border-green-500 h-10 pl-3 pr-10",
                           form.formState.errors.zipCode ? "border-red-300 focus:border-red-500" : "border-gray-200",
                         )}
                       />
                       {form.formState.errors.zipCode ? (
-                        <AlertCircle className="h-5 w-5 text-red-500 absolute right-3 top-3" />
+                        <AlertCircle className="h-5 w-5 text-red-500 absolute right-3 top-2.5" />
                       ) : field.value && !form.formState.errors.zipCode ? (
-                        <CheckCircle className="h-5 w-5 text-green-500 absolute right-3 top-3" />
+                        <CheckCircle className="h-5 w-5 text-green-500 absolute right-3 top-2.5" />
                       ) : null}
                     </div>
                   </FormControl>
@@ -358,22 +358,11 @@ export function TCPARegistrationForm() {
           </div>
         </div>
 
-        <div className="bg-yellow-50 border-2 border-yellow-200 rounded-md p-3 mt-2">
-          <p className="text-sm">
-            By submitting this form, I am providing my digital signature and expressly consenting to receive marketing
-            communications via automated telephone calls, text messages, and emails from RewardsClaimer and our{" "}
-            <Link
-              href="https://jmcustomerprivacy.com/marketing-partners"
-              className="text-blue-600 hover:underline"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              marketing partners
-            </Link>{" "}
-            regarding offers for financial services, home services, insurance products, auto loans, credit card debt
-            relief, sweepstakes, healthcare services including Medicare/ACA options, and other products at the phone
-            number provided above, even if my number is on a do-not-call list. I understand consent is not a condition
-            of purchase. Message & data rates may apply. I can opt-out at any time by texting STOP.
+        <div className="bg-yellow-50 border-2 border-yellow-200 rounded-md p-2 mt-2">
+          <p className="text-xs">
+            By submitting this form, I consent to receive marketing communications from RewardsClaimer and partners
+            regarding offers for financial services, home services, insurance products, and more at the phone number
+            provided.
           </p>
         </div>
 
@@ -383,7 +372,7 @@ export function TCPARegistrationForm() {
               type="submit"
               disabled={isSubmitting || !form.formState.isValid}
               className={cn(
-                "w-full py-6 rounded-lg text-lg font-bold transition-all duration-300 hover:scale-105",
+                "w-full py-4 rounded-lg text-lg font-bold transition-all duration-300 hover:scale-105",
                 form.formState.isValid
                   ? "bg-gradient-to-r from-green-600 to-green-400 hover:from-green-700 hover:to-green-500 text-white animate-pulse"
                   : "bg-gray-300 text-gray-500 cursor-not-allowed",
